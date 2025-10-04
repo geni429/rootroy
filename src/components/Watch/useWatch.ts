@@ -1,14 +1,17 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { tickSecond } from "./tickSecond";
 
 export default function useWatch() {
   const [currentDate, setCurrentDate] = useState(new Date());
 
   useEffect(() => {
-    setInterval(() => {
-      setCurrentDate(new Date());
-    }, 1000);
+    const interval = tickSecond(() => setCurrentDate(new Date()));
+
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
 
   return currentDate;
