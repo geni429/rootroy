@@ -1,6 +1,5 @@
 import Watch from "@/components/Watch/Watch";
 import { css } from "../../styled-system/css";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -13,7 +12,6 @@ export default function Home() {
           alignItems: "center",
         })}
       >
-        <Image src="/rootroy-logo.png" alt="Logo" width={64} height={64} />
         <h1>RootRoy</h1>
       </div>
       <Watch />
