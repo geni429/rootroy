@@ -17,4 +17,5 @@ test("ticking", () => {
   expect(callback).toHaveBeenCalledTimes(2);
 
   clearInterval(interval);
+  vi.useRealTimers();
 });
