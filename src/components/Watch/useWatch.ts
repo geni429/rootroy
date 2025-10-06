@@ -4,15 +4,15 @@ import { useEffect, useState } from "react";
 import { tickSecond } from "./tickSecond";
 
 export default function useWatch() {
-  const [currentDate, setCurrentDate] = useState(new Date());
+  const [currentTime, setCurrentTime] = useState(new Date());
 
   useEffect(() => {
-    const interval = tickSecond(() => setCurrentDate(new Date()));
+    const interval = tickSecond(() => setCurrentTime(new Date()));
 
     return () => {
       clearInterval(interval);
     };
   }, []);
 
-  return currentDate;
+  return currentTime;
 }

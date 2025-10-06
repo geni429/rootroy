@@ -1,5 +1,6 @@
 import Watch from "@/components/Watch/Watch";
 import { css } from "../../styled-system/css";
+import WatchRenderer from "@/components/Watch/WatchRenderer";
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
       >
         <h1>RootRoy</h1>
       </div>
-      <Watch />
+      <WatchRenderer />
     </div>
   );
 }
