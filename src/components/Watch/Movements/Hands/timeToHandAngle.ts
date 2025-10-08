@@ -9,7 +9,7 @@ export function getHourHandCompletionRatio(
 ) {
   return (
     (hoursToSeconds(hours) + minutesToSeconds(minutes) + seconds) /
-    (60 * 60 * 24)
+    (60 * 60 * 12)
   );
 }
 
