@@ -1,9 +1,9 @@
-import { css, cx } from "../../../../styled-system/css";
-import { useWatchContext } from "../Root/WatchContext";
+import { css, cx } from "../../../../../styled-system/css";
+import { useMovementsContext } from "../MovementsContext";
 import { watchHandBase } from "./styles";
 
 export default function HourHand() {
-  const { handAngleData } = useWatchContext();
+  const { handAngleData } = useMovementsContext();
 
   return (
     <div

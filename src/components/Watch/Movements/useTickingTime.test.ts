@@ -1,10 +1,10 @@
 import { expect, test, vi } from "vitest";
 import { act, renderHook } from "@testing-library/react";
-import useWatch from "./useWatch";
+import useTickingTime from "./useTickingTime";
 
-test("useWatch", () => {
+test("useTickingTime", () => {
   vi.useFakeTimers();
-  const { result } = renderHook(() => useWatch());
+  const { result } = renderHook(() => useTickingTime());
   const startTime = result.current.getTime();
 
   const calcDiff = () => result.current.getTime() - startTime;
@@ -21,11 +21,11 @@ test("useWatch", () => {
   vi.useRealTimers();
 });
 
-test("useWatch call clearInterval after unmounted", () => {
+test("useTickingTime call clearInterval after unmounted", () => {
   vi.useFakeTimers();
   const clearIntervalSpy = vi.spyOn(global, "clearInterval");
 
-  const { unmount } = renderHook(() => useWatch());
+  const { unmount } = renderHook(() => useTickingTime());
 
   expect(clearIntervalSpy).not.toHaveBeenCalled();
 

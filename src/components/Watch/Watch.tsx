@@ -2,9 +2,10 @@
 
 import { css } from "../../../styled-system/css";
 import Image from "next/image";
-import MinuteHand from "./Hands/MinuteHand";
-import SecondHand from "./Hands/SecondHand";
-import HourHand from "./Hands/HourHand";
+import MinuteHand from "./Movements/Hands/MinuteHand";
+import HourHand from "./Movements/Hands/HourHand";
+import SecondHand from "./Movements/Hands/SecondHand";
+import MovementsProvider from "./Movements/MovementsProvider";
 
 export default function Watch() {
   return (
@@ -30,9 +31,11 @@ export default function Watch() {
           transform: "translateX(-50%)",
         })}
       />
-      <HourHand />
-      <MinuteHand />
-      <SecondHand />
+      <MovementsProvider>
+        <HourHand />
+        <MinuteHand />
+        <SecondHand />
+      </MovementsProvider>
     </div>
   );
 }

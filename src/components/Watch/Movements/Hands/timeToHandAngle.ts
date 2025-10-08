@@ -1,5 +1,5 @@
-import { INITIAL_HAND_ANGLE, TimeUnit } from "../constants";
 import { hoursToSeconds, minutesToSeconds } from "date-fns";
+import { INITIAL_HAND_ANGLE } from "../constants";
 import { HandAngleData } from "../types";
 
 export function getHourHandCompletionRatio(
