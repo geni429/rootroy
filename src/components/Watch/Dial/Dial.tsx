@@ -1,8 +1,8 @@
 import { PropsWithChildren } from "react";
-import MinutesDial from "./MinutesDial";
 import Image from "next/image";
 import { css } from "../../../../styled-system/css";
-import HoursDial from "./HoursDial";
+import HourIndices from "./HourIndices";
+import MinuteIndices from "./MinuteIndices";
 
 export default function Dial({ children }: PropsWithChildren) {
   return (
@@ -31,8 +31,8 @@ export default function Dial({ children }: PropsWithChildren) {
           transform: "translateX(-50%)",
         })}
       />
-      <MinutesDial />
-      <HoursDial />
+      <MinuteIndices />
+      <HourIndices />
       {children}
     </div>
   );
