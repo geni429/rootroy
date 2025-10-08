@@ -6,4 +6,5 @@ export const watchHandBase = css({
   left: "50%",
   transformOrigin: "0 0",
   transform: "translateY(-50%)",
+  zIndex: 100,
 });
