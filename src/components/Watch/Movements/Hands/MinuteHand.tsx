@@ -1,5 +1,6 @@
 import { css, cx } from "../../../../../styled-system/css";
 import { useMovementsContext } from "../MovementsContext";
+import { MINUTE_HAND_HEIGHT } from "./constants";
 import { watchHandBase } from "./styles";
 
 export default function MinuteHand() {
@@ -10,12 +11,14 @@ export default function MinuteHand() {
       className={cx(
         watchHandBase,
         css({
-          width: 220,
-          height: 1,
           background: "black",
+          width: "45%",
         })
       )}
-      style={{ rotate: `${handAngleData.minuteHand}deg` }}
+      style={{
+        height: `${MINUTE_HAND_HEIGHT}px`,
+        rotate: `${handAngleData.minuteHand}deg`,
+      }}
     />
   );
 }

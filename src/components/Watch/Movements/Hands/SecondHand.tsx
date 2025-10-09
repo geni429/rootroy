@@ -1,5 +1,6 @@
 import { css, cx } from "../../../../../styled-system/css";
 import { useMovementsContext } from "../MovementsContext";
+import { SECOND_HAND_HEIGHT } from "./constants";
 import { watchHandBase } from "./styles";
 
 export default function SecondHand() {
@@ -11,11 +12,13 @@ export default function SecondHand() {
         watchHandBase,
         css({
           background: "#4b6140",
-          width: 250,
-          height: 0.5,
+          width: "50%",
         })
       )}
-      style={{ rotate: `${handAngleData.secondHand}deg` }}
+      style={{
+        height: `${SECOND_HAND_HEIGHT}px`,
+        rotate: `${handAngleData.secondHand}deg`,
+      }}
     >
       <div
         className={css({

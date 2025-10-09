@@ -9,11 +9,13 @@ export default function BarIndex({ index, width, height }: BarIndexProps) {
         left: "50%",
         transform: "translateY(-50%)",
         background: "black",
-        width: `calc(50% + ${width}px)`,
-        height,
         transformOrigin: "0 0",
       })}
-      style={{ rotate: `${index * 6}deg` }}
+      style={{
+        width: `calc(50% + ${width}px)`,
+        height: `${height}px`,
+        rotate: `${index * 6}deg`,
+      }}
     />
   );
 }

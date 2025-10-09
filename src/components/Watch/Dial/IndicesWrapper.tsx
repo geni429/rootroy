@@ -11,10 +11,12 @@ export default function IndicesWrapper({
     <div
       className={css({
         position: "absolute",
-        width: `calc(100% - ${barIndexWidth * 2}px)`,
-        height: `calc(100% - ${barIndexWidth * 2}px)`,
         borderRadius: "50%",
       })}
+      style={{
+        width: `calc(100% - ${barIndexWidth * 2}px)`,
+        height: `calc(100% - ${barIndexWidth * 2}px)`,
+      }}
     >
       {children}
       <div

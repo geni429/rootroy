@@ -1,3 +1,4 @@
+import { HOUR_HAND_HEIGHT } from "../Movements/Hands/constants";
 import BarIndex from "./BarIndex";
 import { HOUR_BAR_INDEX_WIDTH } from "./constants";
 import IndicesWrapper from "./IndicesWrapper";
@@ -14,7 +15,7 @@ export default function HourIndices() {
             key={index}
             index={index}
             width={HOUR_BAR_INDEX_WIDTH}
-            height={1.5}
+            height={HOUR_HAND_HEIGHT}
           />
         );
       })}
